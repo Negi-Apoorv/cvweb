@@ -40,10 +40,8 @@ body {
     position: relative;
 }
     section {
-      /* min-height: 100vh; */
       padding: 0 2rem;
-          padding-bottom: 30px;
-
+      padding-bottom: 30px;
       position: relative;
       overflow: hidden;
       background: #121212;
@@ -162,7 +160,6 @@ body {
       background: linear-gradient(90deg, #007fff, #00bcd4);
       color: white;
     }
-    
 #main_sec{
     padding-top: 20px;
 }
@@ -200,7 +197,6 @@ body {
       transition: all 0.3s ease;
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
-/* ✨ Premium Animations */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -221,7 +217,7 @@ body {
   }
 }
 
-/* Apply animation to sections */
+
 section {
   animation: fadeUp 0.8s ease-in-out both;
 }
@@ -233,14 +229,14 @@ section {
   animation: fadeIn 0.8s ease-in-out both;
 }
 
-/* Hover Glow Effect */
+
 .card:hover,
 .project_card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(0, 127, 255, 0.2);
 }
 
-/* Navigation link hover */
+
 nav a {
   position: relative;
 }
@@ -260,13 +256,11 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Smooth button hover */
 button:hover {
   transform: scale(1.05);
   opacity: 0.95;
 }
 
-/* 👇 Responsiveness */
 @media (max-width: 1024px) {
   nav {
     flex-wrap: wrap;
@@ -277,8 +271,8 @@ button:hover {
     align-items: center;
   }
   #project1img {
-    height: auto;
-    width: 60%;
+    height: auto  !important;
+    width: 60%  !important;
     margin-bottom: 20px;
   }
   .viewprojbut{
@@ -323,22 +317,15 @@ button:hover {
   h2 {
     font-size: 1.4rem;
   }
-  .projectimg{
-    height: auto;
-    width: 60%;
-  }
 }
 html {
   scroll-behavior: smooth;
 }
-/* 🌐 Responsive Adjustments */
+
 @media (max-width: 768px) {
-  /* Reduce global padding */
   .container {
     padding: 1rem;
   }
-    
-
   nav{
     margin-bottom: 10px;
   }
@@ -349,8 +336,6 @@ html {
     padding: 1rem;
     padding-bottom: 20px;
   }
-
-  /* Stack hero and nav */
   header {
     flex-direction: column;
     align-items: center;
@@ -374,7 +359,14 @@ html {
     justify-content: center;
   }
 }
-/* Profile Picture Animation */
+@media (max-width: 411px){
+    .grid_skills{
+        display: block;
+    }
+    .card{
+        margin: 20px;
+    }
+}
 @keyframes profileIn {
   0% {
     opacity: 0;
@@ -398,8 +390,6 @@ html {
   box-shadow: 0 0 12px rgba(0, 127, 255, 0.5), 0 0 24px rgba(0, 188, 212, 0.3);
 }
 
-
-/* Name Animation: Slide in from left */
 @keyframes nameSlideIn {
   0% {
     opacity: 0;
@@ -416,7 +406,6 @@ html {
   opacity: 0;
 }
 
-/* Optional: Subtitle fade */
 @keyframes subtitleFade {
   from {
     opacity: 0;
