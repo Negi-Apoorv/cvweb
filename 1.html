@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean & Structured Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        #pic{ 
+    border-radius: 50%;
+    height: 94px;
+    width: 94px;
+}
+#name_head{
+    padding-left: 20px;
+}
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #000000;
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+#hero{
+    display: flex;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    
+}
+.main-box {
+    margin-top: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+    section {
+      /* min-height: 100vh; */
+      padding: 0 2rem;
+          padding-bottom: 30px;
+
+      position: relative;
+      overflow: hidden;
+      background: #121212;
+      color: #e0e0e0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+    #subtitle {
+      font-size: 1.2rem;
+      color: #bbb;
+      padding-left: 20px;
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+      margin-top: 20px;
+      margin-bottom: 65px;
+    }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    h2 span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #007fff, #00bcd4);
+      border-radius: 2px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .grid_skills{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 2rem;
+    }
+    i{
+        color: #007fff;
+    }
+    .card {
+      background: #212121;
+      border-radius: 15px;
+      padding: .5rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+    .card p {
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+    .skill-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .skill-bar {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+    }
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #007fff, #00bcd4);
+      border-radius: 4px;
+    }
+    .project-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: rgba(0, 127, 255, 0.15);
+      color: #007fff;
+    }
+    button {
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      font-size: 1rem;
+      background: linear-gradient(90deg, #007fff, #00bcd4);
+      color: white;
+    }
+    
+#main_sec{
+    padding-top: 20px;
+}
+.hero_alpha{
+    margin: 0;
+    padding: 0;
+}
+.not_grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+}
+.project_card {
+      background: #212121;
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.project_card p {
+      color: #ccc;
+      margin-bottom: 1rem;
+}
+#project{
+    display: flex;
+}
+#projectimg{
+    height: 240px;
+    padding: 10px;
+}
+.card_contact {
+      background: #212121;
+      border-radius: 15px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+/* ✨ Premium Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply animation to sections */
+section {
+  animation: fadeUp 0.8s ease-in-out both;
+}
+
+.card,
+.project_card,
+.card_contact {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeIn 0.8s ease-in-out both;
+}
+
+/* Hover Glow Effect */
+.card:hover,
+.project_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 127, 255, 0.2);
+}
+
+/* Navigation link hover */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #007fff, #00bcd4);
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Smooth button hover */
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* 👇 Responsiveness */
+@media (max-width: 1024px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #project {
+    flex-direction: column;
+    align-items: center;
+  }
+  #project1img {
+    height: auto;
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  .viewprojbut{
+    margin-top:  40px;
+    display: block;
+    margin: 20px auto;
+  }
+  a{
+        text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #name_head, #subtitle {
+    padding-left: 0;
+  }
+  nav {
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  .grid,
+  .not_grid {
+    grid-template-columns: 1fr;
+  }
+  .grid_skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid_skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  .projectimg{
+    height: auto;
+    width: 60%;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+/* 🌐 Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Reduce global padding */
+  .container {
+    padding: 1rem;
+  }
+    
+
+  nav{
+    margin-bottom: 10px;
+  }
+  header{
+    margin-bottom: 0;
+  }
+  section {
+    padding: 1rem;
+    padding-bottom: 20px;
+  }
+
+  /* Stack hero and nav */
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .skill-title{
+    margin: 10px;
+  }
+  #hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #name_head,
+  #subtitle {
+    padding-left: 0;
+  }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* Profile Picture Animation */
+@keyframes profileIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#pic {
+  animation: profileIn 1s ease-out forwards;
+  opacity: 0;
+  box-shadow: 0 0 0 rgba(0, 127, 255, 0); /* Start shadow for hover transition */
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+#pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 127, 255, 0.5), 0 0 24px rgba(0, 188, 212, 0.3);
+}
+
+
+/* Name Animation: Slide in from left */
+@keyframes nameSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#name_head {
+  animation: nameSlideIn 1s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+/* Optional: Subtitle fade */
+@keyframes subtitleFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#subtitle {
+  animation: subtitleFade 1s ease-out 0.8s forwards;
+  opacity: 0;
+}
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main-box">
+      <section id="main_sec">
+        <header>
+          <div id="hero">
+            <img id="pic" src="c:\Photos_11\ApoorvNegi_CU23250194.jpg" alt="A">
+            <div>
+            <h1 id="name_head" class="hero_alpha">Apoorv Negi</h1>
+            <p id="subtitle" class="hero_alpha">Frontend Developer & UI Designer</p>
+            </div>
+          </div>
+          <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </header>
+
+        <section id="about">
+          <h2>About Me <span></span></h2>
+          <div class="grid">
+            <div class="card">
+              <p class="about_text">Passionate B.Tech student with a genuine interest in web applications and a knack for creative problem-solving. I enjoy translating abstract ideas into intuitive, user-friendly applications, having guided small teams through each stage of design and implementation.</p>
+            </div>
+            <div class="card">
+              <p class="about_text">I’m always keen to learn new technologies and contribute thoughtfully to every project. Driven by curiosity and a commitment to steady growth, I aim to craft solutions that make everyday tasks smoother and more engaging</p>
+            </div>
+          </div>
+        </section>
+
+                <section id="projects">
+          <h2>Featured Projects <span></span></h2>
+          <div class="not_grid">
+            <div class="project_card">
+              <h3 class="skill-title">G.A.T.E. BUDDY</h3>
+              <div id="project">
+                <p>Engineered an automated quiz platform generating adaptive GATE-style MCQs from files (format .pdf, .docx, .txt and images) using Google Gemini API and Tesseract OCR. <br> <br>
+                &bull; Integrated promt engineering for contextual MCQs generation. <br>
+                &bull; Built flask backend with PyPDF2 and docx2txt for document processing. <br>
+                &bull; Developed responsive frontend for quiz delivery and performance analytics.</p>
+                <img id="projectimg" src="https://drive.google.com/file/d/1lh-m_gb-Nx6b3Uu8ChJybnyPgOwVbN9U/view?usp=sharing" alt="">
+              </div>
+              <a href="https://www.linkedin.com/posts/apoorv-negi-7437462a7_during-my-2nd-year-of-the-college-i-developed-activity-7340364702801108995-TH4K?utm_source=share&utm_medium=member_android&rcm=ACoAAEn4dKMBmzGw9YkpC6ySm-YjwIVAYKMVOxw" target="_blank"><button class="viewprojbut">View Project</button></a> 
+            </div>
+            <div class="project_card">
+              <h3 class="skill-title">SpamShield</h3>
+              <div id="project">
+                <p>Developed an intelligent email classifier to detect spam with high accuracy using machine learning and natural language processing techniques.
+                <BR><BR>&bull;Engineered a real-time spam classifier using Naive Bayes and TF-IDF vectorization.
+                <BR>&bull;Integrated Flask-based backend with scikit-learn and Joblib for fast, lightweight inference.
+                <BR>&bull;Built a responsive single-page web interface for instant email testing and feedback.
+                <br>&bull;Designed preprocessing pipeline for text normalization (lowercasing, punctuation removal).
+                <br>&bull;Achieved 90%+ classification accuracy with prediction times under 10ms.</p>
+                <img id="projectimg" src="c:\Users\negia\OneDrive\Pictures\SPAMSHIELD3X2.png" alt="">
+              </div>
+              <a href="https://www.linkedin.com/posts/apoorv-negi-7437462a7_during-my-2nd-year-of-the-college-i-developed-activity-7340364702801108995-TH4K?utm_source=share&utm_medium=member_android&rcm=ACoAAEn4dKMBmzGw9YkpC6ySm-YjwIVAYKMVOxw" target="_blank"><button class="viewprojbut">View Project</button></a> 
+            </div>
+            <!-- <div class="project_card">
+              <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+              <h3 class="skill-title">Financial Analytics</h3>
+              <p>Interactive financial dashboard with portfolio management and market trend analysis.</p>
+              <button>View Project</button>
+            </div> -->
+          </div>
+        </section>
+
+        <section id="skills">
+          <h2>Technical Skills <span></span></h2>
+          <div class="grid_skills">
+            <div class="card">
+              <h3 class="skill-title"><i class="fab fa-html5"></i> HTML</h3>
+            </div>
+            <div class="card">
+              <h3 class="skill-title"><i class="fab fa-css3-alt"></i> CSS</h3>
+            </div>
+            <div class="card">
+              <h3 class="skill-title"><i class="fab fa-js-square"></i> JS</h3>
+            </div>
+            <div class="card">
+              <h3 class="skill-title"><i class="fas fa-database"></i> MySQL</h3>
+            </div>
+            <div class="card">
+              <h3 class="skill-title"><i class="fab fa-python"></i> Python</h3>
+            </div>
+            <div class="card">
+              <h3 class="skill-title"><i class="fab fa-cuttlefish"></i> C++</h3>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="contact">
+          <h2>Contact me:<span></span></h2>
+          <div class="grid">
+            <div class="card_contact">
+              <p>Interested in working together or have a project in mind?</p>
+              <button>Let's Talk</button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
