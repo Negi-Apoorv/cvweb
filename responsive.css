@@ -1,10 +1,10 @@
 @media (min-width: 1024px) {
-    #projectimg{
+    .projectimg {
         height: 240px;
         padding: 10px;
+        width: auto;
     }
 }
-
 @media (max-width: 1024px) {
     nav {
         flex-wrap: wrap;
@@ -19,7 +19,11 @@
         width: 60% !important;
         margin-bottom: 20px;
     }
-    .viewprojbut{
+    .projectimg {
+        height: auto !important;
+        width: 60% !important;
+    }
+    .viewprojbut {
         margin-top: 40px;
         display: block;
         margin: 20px auto;
@@ -97,11 +101,11 @@
     }
 }
 
-@media (max-width: 411px){
-    .grid_skills{
+@media (max-width: 411px) {
+    .grid_skills {
         display: block;
     }
-    .card{
+    .card {
         margin: 20px;
     }
 }
