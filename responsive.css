@@ -10,10 +10,13 @@
         flex-wrap: wrap;
         justify-content: center;
     }
-    #project, #contact {
+    #project{
         flex-direction: column;
         align-items: center;
     }
+    #contact{
+        flex-direction: column;
+        align-items: center;
     #project1img {
         height: auto !important;
         width: 60% !important;
