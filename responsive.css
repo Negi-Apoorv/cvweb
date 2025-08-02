@@ -12,10 +12,13 @@
     width: 90% !important;
     margin-bottom: 20px;
   }
-  .viewprojbut{
+  button{
     margin-top:  40px;
     display: block;
     margin: 20px auto;
+  }
+  #cntct_txt{
+    text-align: center;
   }
   a{
     text-decoration: none;
