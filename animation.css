@@ -1,0 +1,145 @@
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+section {
+  animation: fadeUp 0.8s ease-in-out both;
+}
+.card,
+.project_card,
+.card_contact {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeIn 0.8s ease-in-out both;
+}
+.card:hover,
+.project_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 127, 255, 0.2);
+}
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #007fff, #00bcd4);
+  transition: width 0.3s ease-in-out;
+}
+nav a:hover::after {
+  width: 100%;
+}
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+.card {
+    background: #212121;
+    border-radius: 15px;
+    padding: .5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+button {
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+    background: linear-gradient(90deg, #007fff, #00bcd4);
+    color: white;
+} 
+.project_card {
+    background: #212121;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.card_contact {
+    background: #212121;
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes profileIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+#pic {
+  animation: profileIn 1s ease-out forwards;
+  opacity: 0;
+  box-shadow: 0 0 0 rgba(0, 127, 255, 0); /* Start shadow for hover transition */
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+#pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 127, 255, 0.5), 0 0 24px rgba(0, 188, 212, 0.3);
+}
+@keyframes nameSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#name_head {
+  animation: nameSlideIn 1s ease-out 0.4s forwards;
+  opacity: 0;
+}
+@keyframes subtitleFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#subtitle {
+  animation: subtitleFade 1s ease-out 0.8s forwards;
+  opacity: 0;
+}
